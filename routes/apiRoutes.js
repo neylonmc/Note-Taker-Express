@@ -1,48 +1,49 @@
 const fs = require("fs"); 
-var notes = require("../db/db.json");
 var uuid = require("uuid"); 
 
 // Routing
 module.exports = function(app) {
 
-  // GET request
+    // GET request
   app.get("/api/notes", function (req, res) {
-    res.json(notes);
+    fs.readFile("./db/db.json", (err, data) => {
+        var noteParsed = JSON.parse(data);
+        res.json(noteParsed)
+    });
   });
 
   // POST request
   app.post("/api/notes", function (req, res) {
     let noteId = {
+        id: uuid.v4(),
         title: req.body.title,
-        text: req.body.text,
-        id: uuid.v4()
+        text: req.body.text
     }
 
-    fs.readFile("./db/db.json" , (err, data) => {
-        var parsedNote = JSON.parse(data);
-        parsedNote.push(noteId);
-        fs.writeFile("./db/db.json", JSON.stringify(parsedNote), function (err, result) {
+    fs.readFile("./db/db.json", (err, data) => {
+        var noteParsed = JSON.parse(data);
+        noteParsed.push(noteId); 
+        fs.writeFile("./db/db.json", JSON.stringify(noteParsed), function (err, post) {
             if (err) throw err; 
         });
     });
-    res.send("Updated notes"); 
-  });
-  
-  // DELETE request
-  app.delete("/api/notes:id", function (req, res) {
-        
-    fs.readFile("./db/db.json", "utf8", (err,data) => {
-       
-        const allNotes = JSON.parse(data);
-        const newAllNotes = allNotes.filter(note => note.id != req.params.id);
+    //res.send("Updated notes");
+    res.send();
+    console.log("You have updated your notes.");
+});
 
-        fs.writeFile('./db/db.json', JSON.stringify(newAllNotes), err => {
-            if (err) throw err;
-            res.send(notes);
-            console.log("Your note has been deleted.");
+ 
+  // DELETE request
+  app.delete("/api/notes/:id", function (req, res) {
+    fs.readFile("./db/db.json", (err, data) => {
+        var noteParsed = JSON.parse(data);
+        var newNote = noteParsed.filter(note => note.id !== req.params.id); 
+        fs.writeFile("./db/db.json", JSON.stringify(newNote), function(err, post) {
+            if (err) throw err; 
         });
     });
-  });
+    res.send(); 
+    console.log("You have deleted a note.");
 
-
+});
 };
