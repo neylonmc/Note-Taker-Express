@@ -24,9 +24,13 @@
   
 ## Usage
   The user will need to run $node server which will create a connection with server 3500. 
-  <img src="../public/assets/start.gif" alt="gif of deployed app">
-  The user will then need to run localhost:3500 in their browser to receive the home page for the Note Taker Application. 
-  
+  <img src="./public/assets/images/start.gif" alt="gif of deployed app">
+  The user will then need to run localhost:3500 in their browser to receive the home page for the Note Taker Application. They can then click "Get Started" to take them to the note taking page. They can create a note and click the save button to save the note.
+  <img src="./public/assets/images/note.gif" alt="gif of deployed app">
+  The user can add as many notes as they would like. If they do not want a note anymore, they can simply hit the "trash" button to delete the note.
+  <img src="./public/assets/images/delete.gif" alt="gif of deployed app">
+  If they wish to view a note they have save, they simply click on the note and its contents will appear in the main section.
+
 ## License
   [![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
   
