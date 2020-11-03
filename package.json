@@ -13,6 +13,7 @@
     "compression": "^1.7.4",
     "express": "^4.16.4",
     "mysql": "^2.18.1",
+    "node-url-shortener": "^1.1.11",
     "uuid": "^8.3.1"
   }
 }
