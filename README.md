@@ -14,6 +14,8 @@
 * [Contributing](#contributing)
   
 * [Tests](#tests)
+
+*[Deployed Link](#deployed)
   
 * [Questions?](#questions)
 
@@ -29,7 +31,7 @@
   <img src="./public/assets/images/note.gif" alt="gif of deployed app">
   The user can add as many notes as they would like. If they do not want a note anymore, they can simply hit the "trash" button to delete the note.
   <img src="./public/assets/images/delete.gif" alt="gif of deployed app">
-  If they wish to view a note they have save, they simply click on the note and its contents will appear in the main section.
+  If they wish to view a note they have saved, the user will simply click on the note and its contents will appear in the main section.
 
 ## License
   [![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
@@ -39,6 +41,9 @@
   
 ## Tests
   N/a
+
+## Deployed Link
+  This application can be deployed [here on Heroku]("https://fathomless-woodland-54966.herokuapp.com") 
   
 ## Questions? Contact Me
   GitHub: [neylonmc]("https://github.com/neylonmc")
