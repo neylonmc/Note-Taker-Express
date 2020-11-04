@@ -15,7 +15,7 @@
   
 * [Tests](#tests)
 
-*[Deployed Link](#deployed)
+* [Deployed Link](#deployedlink)
   
 * [Questions?](#questions)
 
@@ -43,7 +43,7 @@
   N/a
 
 ## Deployed Link
-  This application can be deployed [here on Heroku]("https://fathomless-woodland-54966.herokuapp.com") 
+  This application can be deployed [here on Heroku]("https://fathomless-woodland-54966.herokuapp.com"). 
   
 ## Questions? Contact Me
   GitHub: [neylonmc]("https://github.com/neylonmc")
